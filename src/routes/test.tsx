@@ -1,7 +1,12 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { z } from "zod";
-import { generatePaper, type ExamType, type GeneratedPaper } from "@/data/pyq";
+import {
+  generatePaperWithChapters,
+  type ExamType,
+  type GeneratedPaper,
+  type Subject,
+} from "@/data/pyq";
 
 const searchSchema = z.object({
   exam: z.enum(["JEE Main", "JEE Advanced"]).default("JEE Main"),
@@ -37,7 +42,21 @@ function TestPage() {
   const navigate = useNavigate();
 
   const paper: GeneratedPaper = useMemo(
-    () => generatePaper(exam as ExamType, seedParam ?? Date.now()),
+    () => {
+      let chapters: Partial<Record<Subject, string[]>> = {};
+      if (typeof window !== "undefined") {
+        const raw = sessionStorage.getItem("jee-mock-config");
+        if (raw) {
+          try {
+            const cfg = JSON.parse(raw) as { chapters?: Partial<Record<Subject, string[]>> };
+            if (cfg.chapters) chapters = cfg.chapters;
+          } catch {
+            // ignore
+          }
+        }
+      }
+      return generatePaperWithChapters(exam as ExamType, chapters, seedParam ?? Date.now());
+    },
     [exam, seedParam],
   );
 
