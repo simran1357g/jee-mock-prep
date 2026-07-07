@@ -821,6 +821,49 @@ export function generatePaper(exam: ExamType, seed = Date.now()): GeneratedPaper
   };
 }
 
+// Generate a paper filtered by per-subject chapter selections.
+// If a subject's chapter list is empty/undefined, all chapters are used.
+export function generatePaperWithChapters(
+  exam: ExamType,
+  chapterFilter: Partial<Record<Subject, string[]>>,
+  seed = Date.now(),
+): GeneratedPaper {
+  const rand = mulberry32(seed);
+  const pick = (subject: Subject, count: number): PYQ[] => {
+    const selected = chapterFilter[subject];
+    let pool = PYQ_BANK.filter(
+      (q) => q.subject === subject && (q.exam === exam || exam === "JEE Main"),
+    );
+    if (selected && selected.length > 0) {
+      pool = pool.filter((q) => selected.includes(q.chapter));
+    }
+    // fallbacks so paper always fills
+    if (pool.length === 0) {
+      pool = PYQ_BANK.filter((q) => q.subject === subject);
+      if (selected && selected.length > 0) {
+        const filtered = pool.filter((q) => selected.includes(q.chapter));
+        if (filtered.length > 0) pool = filtered;
+      }
+    }
+    const shuffled = shuffle(pool, rand);
+    const out: PYQ[] = [];
+    for (let i = 0; i < count; i++) out.push(shuffled[i % shuffled.length]);
+    return out;
+  };
+  const questions = [
+    ...pick("Physics", 25),
+    ...pick("Chemistry", 25),
+    ...pick("Mathematics", 25),
+  ];
+  return {
+    seed,
+    exam,
+    questions,
+    totalMarks: 300,
+    durationSec: 2 * 60 * 60,
+  };
+}
+
 export function scorePaper(
   paper: GeneratedPaper,
   answers: Record<number, string>,
