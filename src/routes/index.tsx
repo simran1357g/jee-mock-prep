@@ -8,8 +8,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "JEE Mock Test Generator — NTA-style PYQ Papers" },
       { name: "description", content: "Generate a full 2-hour, 75-question JEE Main / Advanced mock test built from real Previous Year Questions with cited sources." },
-      { property: "og:title", content: "JEE Mock Test Generator" },
-      { property: "og:description", content: "Full 2-hour NTA-style JEE mock tests from real PYQs with sources." },
+      { property: "og:title", content: "JEE Mock Test Generator — NTA-style PYQ Papers" },
+      { property: "og:description", content: "Generate a full 2-hour, 75-question JEE Main / Advanced mock test built from real Previous Year Questions with cited sources." },
     ],
   }),
   component: Index,
