@@ -159,6 +159,25 @@ function TestPage() {
             {q.question}
           </p>
 
+          <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-muted-foreground">
+            <span className="rounded bg-secondary px-2 py-0.5">
+              Source: {q.exam} · {q.session}
+            </span>
+            {q.difficulty && (
+              <span
+                className={`rounded px-2 py-0.5 font-medium ${
+                  q.difficulty === "Hard"
+                    ? "bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-200"
+                    : q.difficulty === "Medium"
+                      ? "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200"
+                      : "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200"
+                }`}
+              >
+                {q.difficulty}
+              </span>
+            )}
+          </div>
+
           {q.type === "MCQ" && q.options ? (
             <div className="mt-6 space-y-2">
               {q.options.map((opt, i) => {
