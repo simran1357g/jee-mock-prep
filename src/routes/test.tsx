@@ -41,29 +41,29 @@ function TestPage() {
   const { exam, seed: seedParam } = Route.useSearch();
   const navigate = useNavigate();
 
-  const paper: GeneratedPaper = useMemo(
-    () => {
-      let chapters: Partial<Record<Subject, string[]>> = {};
-      if (typeof window !== "undefined") {
-        const raw = sessionStorage.getItem("jee-mock-config");
-        if (raw) {
-          try {
-            const cfg = JSON.parse(raw) as { chapters?: Partial<Record<Subject, string[]>> };
-            if (cfg.chapters) chapters = cfg.chapters;
-          } catch {
-            // ignore
-          }
-        }
-      }
-      return generatePaperWithChapters(exam as ExamType, chapters, seedParam ?? Date.now());
-    },
-    [exam, seedParam],
-  );
-
+  // Generate paper on the client only to avoid SSR/CSR hydration mismatch
+  // (Date.now() seed + sessionStorage-based chapter filter differ between SSR and hydration).
+  const [paper, setPaper] = useState<GeneratedPaper | null>(null);
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [marked, setMarked] = useState<Record<number, boolean>>({});
-  const [timeLeft, setTimeLeft] = useState(paper.durationSec);
+  const [timeLeft, setTimeLeft] = useState(2 * 60 * 60);
+
+  useEffect(() => {
+    let chapters: Partial<Record<Subject, string[]>> = {};
+    const raw = sessionStorage.getItem("jee-mock-config");
+    if (raw) {
+      try {
+        const cfg = JSON.parse(raw) as { chapters?: Partial<Record<Subject, string[]>> };
+        if (cfg.chapters) chapters = cfg.chapters;
+      } catch {
+        // ignore
+      }
+    }
+    const p = generatePaperWithChapters(exam as ExamType, chapters, seedParam ?? Date.now());
+    setPaper(p);
+    setTimeLeft(p.durationSec);
+  }, [exam, seedParam]);
 
   useEffect(() => {
     const id = setInterval(() => setTimeLeft((t) => (t > 0 ? t - 1 : 0)), 1000);
@@ -71,6 +71,7 @@ function TestPage() {
   }, []);
 
   const submit = () => {
+    if (!paper) return;
     sessionStorage.setItem(
       "jee-mock-result",
       JSON.stringify({ paper, answers, timeUsed: paper.durationSec - timeLeft }),
@@ -79,9 +80,17 @@ function TestPage() {
   };
 
   useEffect(() => {
-    if (timeLeft === 0) submit();
+    if (paper && timeLeft === 0) submit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [timeLeft]);
+  }, [timeLeft, paper]);
+
+  if (!paper) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background text-muted-foreground">
+        Preparing your paper…
+      </div>
+    );
+  }
 
   const q = paper.questions[current];
   const subjectOfCurrent =
@@ -149,6 +158,25 @@ function TestPage() {
           <p className="whitespace-pre-wrap text-base leading-relaxed">
             {q.question}
           </p>
+
+          <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-muted-foreground">
+            <span className="rounded bg-secondary px-2 py-0.5">
+              Source: {q.exam} · {q.session}
+            </span>
+            {q.difficulty && (
+              <span
+                className={`rounded px-2 py-0.5 font-medium ${
+                  q.difficulty === "Hard"
+                    ? "bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-200"
+                    : q.difficulty === "Medium"
+                      ? "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200"
+                      : "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200"
+                }`}
+              >
+                {q.difficulty}
+              </span>
+            )}
+          </div>
 
           {q.type === "MCQ" && q.options ? (
             <div className="mt-6 space-y-2">
