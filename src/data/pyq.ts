@@ -84,7 +84,7 @@ export const PYQ_BANK: PYQ[] = [
       "A ball is projected vertically upward with a velocity of 50 m/s. The maximum height reached is (g = 10 m/s²):",
     options: ["100 m", "125 m", "150 m", "75 m"],
     answer: "B",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+Question+Paper+%2824+Jan+Shift+1%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 Question Paper (24 Jan Shift 1)",
   },
   {
@@ -99,7 +99,7 @@ export const PYQ_BANK: PYQ[] = [
       "A block of mass 10 kg is on a rough horizontal surface (μ = 0.2). The minimum horizontal force to just move it is (g = 10 m/s²):",
     options: ["10 N", "20 N", "40 N", "100 N"],
     answer: "B",
-    sourceUrl: "https://www.vedantu.com/jee-main/previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Vedantu+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Vedantu PYQ Archive",
   },
   {
@@ -113,7 +113,7 @@ export const PYQ_BANK: PYQ[] = [
     question:
       "A body of mass 2 kg moving with velocity 6 m/s collides elastically with a stationary body of same mass. The velocity (in m/s) of the second body after collision is:",
     answer: "6",
-    sourceUrl: "https://www.sarthaks.com/tag/jee-main-2021",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Sarthaks+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Sarthaks PYQ Archive",
   },
   {
@@ -127,7 +127,7 @@ export const PYQ_BANK: PYQ[] = [
     question: "Moment of inertia of a uniform solid sphere of mass M and radius R about its diameter is:",
     options: ["(2/5) M R²", "(2/3) M R²", "(1/2) M R²", "M R²"],
     answer: "A",
-    sourceUrl: "https://byjus.com/jee/jee-main-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2023+%E2%80%94+BYJU%27s+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2023 — BYJU's PYQ Archive",
   },
   {
@@ -142,7 +142,7 @@ export const PYQ_BANK: PYQ[] = [
       "The escape velocity from Earth's surface is 11.2 km/s. From a planet whose mass is 4 times and radius is 2 times that of Earth, escape velocity will be:",
     options: ["11.2 km/s", "15.8 km/s", "22.4 km/s", "5.6 km/s"],
     answer: "A",
-    sourceUrl: "https://www.aakash.ac.in/jee-main-previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2020+%E2%80%94+Aakash+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2020 — Aakash PYQ Archive",
   },
   {
@@ -157,7 +157,7 @@ export const PYQ_BANK: PYQ[] = [
       "For an ideal gas undergoing an isothermal process, the change in internal energy is:",
     options: ["Positive", "Negative", "Zero", "Depends on pressure"],
     answer: "C",
-    sourceUrl: "https://www.embibe.com/exams/jee-main-previous-year-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Embibe+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Embibe PYQ Archive",
   },
   {
@@ -171,7 +171,7 @@ export const PYQ_BANK: PYQ[] = [
     question:
       "A simple pendulum of length 1 m has a time period (in seconds, take π² = 10, g = 10 m/s²) equal to:",
     answer: "2",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%2825+Jan+Shift+2%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (25 Jan Shift 2)",
   },
   {
@@ -186,7 +186,7 @@ export const PYQ_BANK: PYQ[] = [
       "Two point charges +4 μC and −4 μC are placed 2 cm apart. The magnitude of the electric dipole moment is:",
     options: ["4 × 10⁻⁸ C·m", "8 × 10⁻⁸ C·m", "16 × 10⁻⁸ C·m", "2 × 10⁻⁸ C·m"],
     answer: "B",
-    sourceUrl: "https://www.vedantu.com/jee-main/previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Vedantu+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Vedantu PYQ Archive",
   },
   {
@@ -201,7 +201,7 @@ export const PYQ_BANK: PYQ[] = [
       "The resistance of a wire is 10 Ω. If it is stretched to double its length (volume constant), new resistance is:",
     options: ["20 Ω", "40 Ω", "5 Ω", "10 Ω"],
     answer: "B",
-    sourceUrl: "https://byjus.com/jee/jee-main-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+BYJU%27s+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — BYJU's PYQ Archive",
   },
   {
@@ -216,7 +216,7 @@ export const PYQ_BANK: PYQ[] = [
       "A coil of 100 turns and area 0.01 m² is placed in a magnetic field changing at 2 T/s. The induced EMF is:",
     options: ["1 V", "2 V", "0.2 V", "20 V"],
     answer: "B",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%28April+Shift+2%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (April Shift 2)",
   },
   {
@@ -231,7 +231,7 @@ export const PYQ_BANK: PYQ[] = [
       "In Young's double-slit experiment, if the distance between the slits is halved, the fringe width will:",
     options: ["Halve", "Double", "Remain same", "Become four times"],
     answer: "B",
-    sourceUrl: "https://www.sarthaks.com/tag/jee-main-2021",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Sarthaks+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Sarthaks PYQ Archive",
   },
   {
@@ -246,7 +246,7 @@ export const PYQ_BANK: PYQ[] = [
       "The de Broglie wavelength of an electron accelerated through a potential of 100 V is approximately:",
     options: ["1.23 Å", "12.3 Å", "0.123 Å", "0.0123 Å"],
     answer: "A",
-    sourceUrl: "https://www.embibe.com/exams/jee-main-previous-year-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Embibe+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Embibe PYQ Archive",
   },
   {
@@ -266,7 +266,7 @@ export const PYQ_BANK: PYQ[] = [
       "Neither",
     ],
     answer: "B",
-    sourceUrl: "https://jeeadv.ac.in/past_qps.html",
+    sourceUrl: "https://www.google.com/search?q=JEE+Advanced+2022+Paper+1+%28Official+Archive%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Advanced 2022 Paper 1 (Official Archive)",
   },
   {
@@ -280,7 +280,7 @@ export const PYQ_BANK: PYQ[] = [
     question:
       "Two identical conducting spheres, one with charge +6Q and other with −2Q, are brought in contact and separated. The final charge (in units of Q) on each is:",
     answer: "2",
-    sourceUrl: "https://jeeadv.ac.in/past_qps.html",
+    sourceUrl: "https://www.google.com/search?q=JEE+Advanced+2021+Paper+2+%28Official+Archive%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Advanced 2021 Paper 2 (Official Archive)",
   },
   {
@@ -295,7 +295,7 @@ export const PYQ_BANK: PYQ[] = [
       "A car accelerates from rest at 2 m/s² for 10 s. Distance covered is:",
     options: ["50 m", "100 m", "200 m", "20 m"],
     answer: "B",
-    sourceUrl: "https://www.aakash.ac.in/jee-main-previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2020+%E2%80%94+Aakash+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2020 — Aakash PYQ Archive",
   },
 
@@ -312,7 +312,7 @@ export const PYQ_BANK: PYQ[] = [
       "The number of radial nodes in a 3p orbital is:",
     options: ["0", "1", "2", "3"],
     answer: "B",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%28Jan+Shift+1%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (Jan Shift 1)",
   },
   {
@@ -326,7 +326,7 @@ export const PYQ_BANK: PYQ[] = [
     question: "The hybridisation of central atom in SF₆ is:",
     options: ["sp³", "sp³d", "sp³d²", "sp³d³"],
     answer: "C",
-    sourceUrl: "https://www.vedantu.com/jee-main/previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Vedantu+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Vedantu PYQ Archive",
   },
   {
@@ -341,7 +341,7 @@ export const PYQ_BANK: PYQ[] = [
       "For a spontaneous process at constant T and P, which is always true?",
     options: ["ΔH < 0", "ΔS > 0", "ΔG < 0", "ΔU < 0"],
     answer: "C",
-    sourceUrl: "https://www.sarthaks.com/tag/jee-main-2021",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Sarthaks+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Sarthaks PYQ Archive",
   },
   {
@@ -355,7 +355,7 @@ export const PYQ_BANK: PYQ[] = [
     question: "The pH of 0.001 M HCl solution is:",
     options: ["1", "2", "3", "4"],
     answer: "C",
-    sourceUrl: "https://byjus.com/jee/jee-main-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+BYJU%27s+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — BYJU's PYQ Archive",
   },
   {
@@ -369,7 +369,7 @@ export const PYQ_BANK: PYQ[] = [
     question:
       "How many Faradays are required to reduce 1 mole of Al³⁺ to Al?",
     answer: "3",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%28April+Shift+1%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (April Shift 1)",
   },
   {
@@ -384,7 +384,7 @@ export const PYQ_BANK: PYQ[] = [
       "For a first-order reaction, half-life is 20 min. Rate constant (min⁻¹) is approximately:",
     options: ["0.0347", "0.0693", "0.1386", "0.020"],
     answer: "A",
-    sourceUrl: "https://www.vedantu.com/jee-main/previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Vedantu+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Vedantu PYQ Archive",
   },
   {
@@ -398,7 +398,7 @@ export const PYQ_BANK: PYQ[] = [
     question: "Which of the following is the strongest reducing agent?",
     options: ["NH₃", "PH₃", "AsH₃", "BiH₃"],
     answer: "D",
-    sourceUrl: "https://www.aakash.ac.in/jee-main-previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Aakash+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Aakash PYQ Archive",
   },
   {
@@ -413,7 +413,7 @@ export const PYQ_BANK: PYQ[] = [
       "The number of unpaired electrons in [Fe(H₂O)₆]³⁺ (high spin) is:",
     options: ["3", "4", "5", "6"],
     answer: "C",
-    sourceUrl: "https://www.embibe.com/exams/jee-main-previous-year-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2023+%E2%80%94+Embibe+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2023 — Embibe PYQ Archive",
   },
   {
@@ -433,7 +433,7 @@ export const PYQ_BANK: PYQ[] = [
       "Potassium ferrocyanide",
     ],
     answer: "B",
-    sourceUrl: "https://byjus.com/jee/jee-main-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+BYJU%27s+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — BYJU's PYQ Archive",
   },
   {
@@ -453,7 +453,7 @@ export const PYQ_BANK: PYQ[] = [
       "Propane",
     ],
     answer: "B",
-    sourceUrl: "https://www.sarthaks.com/tag/jee-main-2021",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Sarthaks+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Sarthaks PYQ Archive",
   },
   {
@@ -468,7 +468,7 @@ export const PYQ_BANK: PYQ[] = [
       "Which of the following is the most acidic?",
     options: ["Ethanol", "Phenol", "Water", "Methanol"],
     answer: "B",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%28April+Shift+2%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (April Shift 2)",
   },
   {
@@ -483,7 +483,7 @@ export const PYQ_BANK: PYQ[] = [
       "Which of the following is a disaccharide?",
     options: ["Glucose", "Fructose", "Sucrose", "Cellulose"],
     answer: "C",
-    sourceUrl: "https://www.vedantu.com/jee-main/previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Vedantu+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Vedantu PYQ Archive",
   },
   {
@@ -498,7 +498,7 @@ export const PYQ_BANK: PYQ[] = [
       "The shape of XeF₄ is:",
     options: ["Tetrahedral", "Square planar", "See-saw", "Octahedral"],
     answer: "B",
-    sourceUrl: "https://jeeadv.ac.in/past_qps.html",
+    sourceUrl: "https://www.google.com/search?q=JEE+Advanced+2021+Paper+1+%28Official+Archive%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Advanced 2021 Paper 1 (Official Archive)",
   },
   {
@@ -512,7 +512,7 @@ export const PYQ_BANK: PYQ[] = [
     question:
       "The number of electrons involved in the reduction of MnO₄⁻ to Mn²⁺ in acidic medium is:",
     answer: "5",
-    sourceUrl: "https://jeeadv.ac.in/past_qps.html",
+    sourceUrl: "https://www.google.com/search?q=JEE+Advanced+2022+Paper+2+%28Official+Archive%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Advanced 2022 Paper 2 (Official Archive)",
   },
   {
@@ -527,7 +527,7 @@ export const PYQ_BANK: PYQ[] = [
       "The energy of an electron in the n-th orbit of hydrogen atom is proportional to:",
     options: ["1/n", "1/n²", "n", "n²"],
     answer: "B",
-    sourceUrl: "https://www.aakash.ac.in/jee-main-previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2020+%E2%80%94+Aakash+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2020 — Aakash PYQ Archive",
   },
 
@@ -543,7 +543,7 @@ export const PYQ_BANK: PYQ[] = [
     question: "The value of i¹⁰⁰ + i¹⁰¹ + i¹⁰² + i¹⁰³ is:",
     options: ["0", "1", "i", "−1"],
     answer: "A",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%28Jan+Shift+1%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (Jan Shift 1)",
   },
   {
@@ -558,7 +558,7 @@ export const PYQ_BANK: PYQ[] = [
       "If α, β are roots of x² − 5x + 6 = 0, then α² + β² equals:",
     options: ["13", "25", "11", "37"],
     answer: "A",
-    sourceUrl: "https://www.vedantu.com/jee-main/previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Vedantu+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Vedantu PYQ Archive",
   },
   {
@@ -571,7 +571,7 @@ export const PYQ_BANK: PYQ[] = [
     type: "Numerical",
     question: "Sum of the first 20 natural numbers is:",
     answer: "210",
-    sourceUrl: "https://www.sarthaks.com/tag/jee-main-2021",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Sarthaks+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Sarthaks PYQ Archive",
   },
   {
@@ -586,7 +586,7 @@ export const PYQ_BANK: PYQ[] = [
       "Number of ways to arrange the letters of the word 'MATHS' is:",
     options: ["60", "120", "24", "720"],
     answer: "B",
-    sourceUrl: "https://byjus.com/jee/jee-main-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+BYJU%27s+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — BYJU's PYQ Archive",
   },
   {
@@ -601,7 +601,7 @@ export const PYQ_BANK: PYQ[] = [
       "The coefficient of x² in the expansion of (1 + x)⁵ is:",
     options: ["5", "10", "20", "15"],
     answer: "B",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%28April+Shift+1%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (April Shift 1)",
   },
   {
@@ -616,7 +616,7 @@ export const PYQ_BANK: PYQ[] = [
       "If A is a 3×3 matrix with |A| = 4, then |2A| is:",
     options: ["8", "16", "32", "64"],
     answer: "C",
-    sourceUrl: "https://www.vedantu.com/jee-main/previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Vedantu+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Vedantu PYQ Archive",
   },
   {
@@ -630,7 +630,7 @@ export const PYQ_BANK: PYQ[] = [
     question: "The value of sin(75°) − sin(15°) is:",
     options: ["1/√2", "√3/2 · 1/√2", "1/2", "√3/(2√2)"],
     answer: "A",
-    sourceUrl: "https://www.embibe.com/exams/jee-main-previous-year-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Embibe+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Embibe PYQ Archive",
   },
   {
@@ -645,7 +645,7 @@ export const PYQ_BANK: PYQ[] = [
       "The distance of the point (2, 3) from the line 3x + 4y − 5 = 0 is:",
     options: ["13/5", "1", "2", "13/25"],
     answer: "A",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%28Jan+Shift+2%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (Jan Shift 2)",
   },
   {
@@ -660,7 +660,7 @@ export const PYQ_BANK: PYQ[] = [
       "Eccentricity of the ellipse x²/25 + y²/16 = 1 is:",
     options: ["3/5", "4/5", "5/4", "5/3"],
     answer: "A",
-    sourceUrl: "https://byjus.com/jee/jee-main-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+BYJU%27s+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — BYJU's PYQ Archive",
   },
   {
@@ -674,7 +674,7 @@ export const PYQ_BANK: PYQ[] = [
     question: "lim (x→0) sin(x)/x equals:",
     options: ["0", "1", "∞", "Does not exist"],
     answer: "B",
-    sourceUrl: "https://www.sarthaks.com/tag/jee-main-2021",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2021+%E2%80%94+Sarthaks+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2021 — Sarthaks PYQ Archive",
   },
   {
@@ -687,7 +687,7 @@ export const PYQ_BANK: PYQ[] = [
     type: "Numerical",
     question: "∫₀¹ x² dx equals (in decimal, e.g. 0.33):",
     answer: "0.33",
-    sourceUrl: "https://www.vedantu.com/jee-main/previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+Vedantu+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — Vedantu PYQ Archive",
   },
   {
@@ -702,7 +702,7 @@ export const PYQ_BANK: PYQ[] = [
       "If a = i + j and b = j + k, then a · b equals:",
     options: ["0", "1", "2", "3"],
     answer: "B",
-    sourceUrl: "https://www.nta.ac.in/JeeMain",
+    sourceUrl: "https://www.google.com/search?q=NTA+JEE+Main+2023+%28April+Shift+2%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "NTA JEE Main 2023 (April Shift 2)",
   },
   {
@@ -717,7 +717,7 @@ export const PYQ_BANK: PYQ[] = [
       "A die is rolled. Probability of getting a prime number is:",
     options: ["1/2", "1/3", "2/3", "1/6"],
     answer: "A",
-    sourceUrl: "https://byjus.com/jee/jee-main-question-papers/",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2022+%E2%80%94+BYJU%27s+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2022 — BYJU's PYQ Archive",
   },
   {
@@ -732,7 +732,7 @@ export const PYQ_BANK: PYQ[] = [
       "|1 + i|² is:",
     options: ["1", "2", "√2", "4"],
     answer: "B",
-    sourceUrl: "https://jeeadv.ac.in/past_qps.html",
+    sourceUrl: "https://www.google.com/search?q=JEE+Advanced+2021+Paper+1+%28Official+Archive%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Advanced 2021 Paper 1 (Official Archive)",
   },
   {
@@ -746,7 +746,7 @@ export const PYQ_BANK: PYQ[] = [
     question:
       "∫₀^π sin(x) dx equals:",
     answer: "2",
-    sourceUrl: "https://jeeadv.ac.in/past_qps.html",
+    sourceUrl: "https://www.google.com/search?q=JEE+Advanced+2022+Paper+2+%28Official+Archive%29+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Advanced 2022 Paper 2 (Official Archive)",
   },
   {
@@ -761,7 +761,7 @@ export const PYQ_BANK: PYQ[] = [
       "If A = {1, 2, 3}, number of subsets of A is:",
     options: ["6", "8", "9", "3"],
     answer: "B",
-    sourceUrl: "https://www.aakash.ac.in/jee-main-previous-year-question-paper",
+    sourceUrl: "https://www.google.com/search?q=JEE+Main+2020+%E2%80%94+Aakash+PYQ+Archive+JEE+previous+year+question+paper+PDF",
     sourceLabel: "JEE Main 2020 — Aakash PYQ Archive",
   },
 ];
