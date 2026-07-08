@@ -158,16 +158,23 @@ function ReviewCard({ q, idx, userAnswer }: { q: PYQ; idx: number; userAnswer?: 
       )}
 
       <div className="mt-4 border-t border-border pt-3 text-xs text-muted-foreground">
-        <span className="font-medium text-foreground">Source: </span>
-        {q.sourceLabel} ·{" "}
+        <div>
+          <span className="font-medium text-foreground">Appeared in: </span>
+          {q.exam} — {q.session} ({q.year})
+          {q.difficulty ? ` · Difficulty: ${q.difficulty}` : ""}
+        </div>
+        <div className="mt-1">
+          <span className="font-medium text-foreground">Source: </span>
+          {q.sourceLabel} ·{" "}
         <a
           href={q.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary underline hover:opacity-80"
         >
-          {q.sourceUrl}
+          Open reference
         </a>
+        </div>
       </div>
     </div>
   );
