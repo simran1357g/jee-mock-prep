@@ -14,6 +14,7 @@ export interface PYQ {
   year: number;
   session: string; // e.g. "Jan 2023, Shift 1"
   type: QType;
+  difficulty?: "Easy" | "Medium" | "Hard";
   question: string;
   options?: string[]; // for MCQ, exactly 4
   answer: string; // for MCQ: "A"|"B"|"C"|"D"; for Numerical: numeric string
