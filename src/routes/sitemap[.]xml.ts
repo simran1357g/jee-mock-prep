@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "https://jee-quest-builder.lovable.app";
+const BASE_URL = "https://jeestudio.vercel.app";
 
 interface SitemapEntry {
   path: string;
