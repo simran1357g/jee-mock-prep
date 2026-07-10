@@ -1,5 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { z } from "zod";
 import type { GeneratedPaper } from "@/data/pyq";
 
@@ -33,7 +33,7 @@ const SUBJECT_RANGES = [
 ];
 
 function TestPage() {
-  const { exam, seed: seedParam } = Route.useSearch();
+  const { exam } = Route.useSearch();
   const navigate = useNavigate();
 
   // Generate paper on the client only to avoid SSR/CSR hydration mismatch
