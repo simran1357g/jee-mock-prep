@@ -1,12 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { z } from "zod";
-import {
-  generatePaperWithChapters,
-  type ExamType,
-  type GeneratedPaper,
-  type Subject,
-} from "@/data/pyq";
+import type { GeneratedPaper } from "@/data/pyq";
 
 const searchSchema = z.object({
   exam: z.enum(["JEE Main", "JEE Advanced"]).default("JEE Main"),
@@ -38,7 +33,7 @@ const SUBJECT_RANGES = [
 ];
 
 function TestPage() {
-  const { exam, seed: seedParam } = Route.useSearch();
+  const { exam } = Route.useSearch();
   const navigate = useNavigate();
 
   // Generate paper on the client only to avoid SSR/CSR hydration mismatch
@@ -50,20 +45,20 @@ function TestPage() {
   const [timeLeft, setTimeLeft] = useState(2 * 60 * 60);
 
   useEffect(() => {
-    let chapters: Partial<Record<Subject, string[]>> = {};
-    const raw = sessionStorage.getItem("jee-mock-config");
-    if (raw) {
-      try {
-        const cfg = JSON.parse(raw) as { chapters?: Partial<Record<Subject, string[]>> };
-        if (cfg.chapters) chapters = cfg.chapters;
-      } catch {
-        // ignore
-      }
+    const raw = sessionStorage.getItem("jee-mock-paper");
+    if (!raw) {
+      navigate({ to: "/" });
+      return;
     }
-    const p = generatePaperWithChapters(exam as ExamType, chapters, seedParam ?? Date.now());
-    setPaper(p);
-    setTimeLeft(p.durationSec);
-  }, [exam, seedParam]);
+    try {
+      const p = JSON.parse(raw) as GeneratedPaper;
+      setPaper(p);
+      setTimeLeft(p.durationSec);
+    } catch {
+      navigate({ to: "/" });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const id = setInterval(() => setTimeLeft((t) => (t > 0 ? t - 1 : 0)), 1000);
