@@ -14,7 +14,110 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      pdf_uploads: {
+        Row: {
+          chapter: string
+          created_at: string
+          error_message: string | null
+          exam: string
+          file_name: string
+          file_path: string
+          id: string
+          question_count: number
+          status: string
+          subject: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          chapter: string
+          created_at?: string
+          error_message?: string | null
+          exam?: string
+          file_name: string
+          file_path: string
+          id?: string
+          question_count?: number
+          status?: string
+          subject: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          chapter?: string
+          created_at?: string
+          error_message?: string | null
+          exam?: string
+          file_name?: string
+          file_path?: string
+          id?: string
+          question_count?: number
+          status?: string
+          subject?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_questions: {
+        Row: {
+          answer: string
+          chapter: string
+          created_at: string
+          difficulty: string | null
+          exam: string
+          id: string
+          options: Json | null
+          question: string
+          question_type: string
+          session: string | null
+          subject: string
+          upload_id: string | null
+          user_id: string
+          year: number | null
+        }
+        Insert: {
+          answer: string
+          chapter: string
+          created_at?: string
+          difficulty?: string | null
+          exam?: string
+          id?: string
+          options?: Json | null
+          question: string
+          question_type?: string
+          session?: string | null
+          subject: string
+          upload_id?: string | null
+          user_id: string
+          year?: number | null
+        }
+        Update: {
+          answer?: string
+          chapter?: string
+          created_at?: string
+          difficulty?: string | null
+          exam?: string
+          id?: string
+          options?: Json | null
+          question?: string
+          question_type?: string
+          session?: string | null
+          subject?: string
+          upload_id?: string | null
+          user_id?: string
+          year?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_questions_upload_id_fkey"
+            columns: ["upload_id"]
+            isOneToOne: false
+            referencedRelation: "pdf_uploads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
