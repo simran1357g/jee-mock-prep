@@ -13,7 +13,9 @@ import { Route as TestRouteImport } from './routes/test'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedUploadRouteImport } from './routes/_authenticated/upload'
 
 const TestRoute = TestRouteImport.update({
   id: '/test',
@@ -35,10 +37,19 @@ const AuthRoute = AuthRouteImport.update({
   path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedUploadRoute = AuthenticatedUploadRouteImport.update({
+  id: '/upload',
+  path: '/upload',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -47,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/results': typeof ResultsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/test': typeof TestRoute
+  '/upload': typeof AuthenticatedUploadRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,25 +66,37 @@ export interface FileRoutesByTo {
   '/results': typeof ResultsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/test': typeof TestRoute
+  '/upload': typeof AuthenticatedUploadRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
   '/results': typeof ResultsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/test': typeof TestRoute
+  '/_authenticated/upload': typeof AuthenticatedUploadRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/auth' | '/results' | '/sitemap.xml' | '/test'
+  fullPaths: '/' | '/auth' | '/results' | '/sitemap.xml' | '/test' | '/upload'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/auth' | '/results' | '/sitemap.xml' | '/test'
-  id: '__root__' | '/' | '/auth' | '/results' | '/sitemap.xml' | '/test'
+  to: '/' | '/auth' | '/results' | '/sitemap.xml' | '/test' | '/upload'
+  id:
+    | '__root__'
+    | '/'
+    | '/_authenticated'
+    | '/auth'
+    | '/results'
+    | '/sitemap.xml'
+    | '/test'
+    | '/_authenticated/upload'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
   ResultsRoute: typeof ResultsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -109,6 +133,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -116,11 +147,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/upload': {
+      id: '/_authenticated/upload'
+      path: '/upload'
+      fullPath: '/upload'
+      preLoaderRoute: typeof AuthenticatedUploadRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedUploadRoute: typeof AuthenticatedUploadRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedUploadRoute: AuthenticatedUploadRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
   ResultsRoute: ResultsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
