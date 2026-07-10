@@ -16,6 +16,7 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedUploadRouteImport } from './routes/_authenticated/upload'
+import { Route as AuthenticatedMyQuestionsRouteImport } from './routes/_authenticated/my-questions'
 
 const TestRoute = TestRouteImport.update({
   id: '/test',
@@ -51,6 +52,12 @@ const AuthenticatedUploadRoute = AuthenticatedUploadRouteImport.update({
   path: '/upload',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedMyQuestionsRoute =
+  AuthenticatedMyQuestionsRouteImport.update({
+    id: '/my-questions',
+    path: '/my-questions',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/results': typeof ResultsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/test': typeof TestRoute
+  '/my-questions': typeof AuthenticatedMyQuestionsRoute
   '/upload': typeof AuthenticatedUploadRoute
 }
 export interface FileRoutesByTo {
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
   '/results': typeof ResultsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/test': typeof TestRoute
+  '/my-questions': typeof AuthenticatedMyQuestionsRoute
   '/upload': typeof AuthenticatedUploadRoute
 }
 export interface FileRoutesById {
@@ -76,13 +85,28 @@ export interface FileRoutesById {
   '/results': typeof ResultsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/test': typeof TestRoute
+  '/_authenticated/my-questions': typeof AuthenticatedMyQuestionsRoute
   '/_authenticated/upload': typeof AuthenticatedUploadRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/auth' | '/results' | '/sitemap.xml' | '/test' | '/upload'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/results'
+    | '/sitemap.xml'
+    | '/test'
+    | '/my-questions'
+    | '/upload'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/auth' | '/results' | '/sitemap.xml' | '/test' | '/upload'
+  to:
+    | '/'
+    | '/auth'
+    | '/results'
+    | '/sitemap.xml'
+    | '/test'
+    | '/my-questions'
+    | '/upload'
   id:
     | '__root__'
     | '/'
@@ -91,6 +115,7 @@ export interface FileRouteTypes {
     | '/results'
     | '/sitemap.xml'
     | '/test'
+    | '/_authenticated/my-questions'
     | '/_authenticated/upload'
   fileRoutesById: FileRoutesById
 }
@@ -154,14 +179,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedUploadRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/my-questions': {
+      id: '/_authenticated/my-questions'
+      path: '/my-questions'
+      fullPath: '/my-questions'
+      preLoaderRoute: typeof AuthenticatedMyQuestionsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedMyQuestionsRoute: typeof AuthenticatedMyQuestionsRoute
   AuthenticatedUploadRoute: typeof AuthenticatedUploadRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedMyQuestionsRoute: AuthenticatedMyQuestionsRoute,
   AuthenticatedUploadRoute: AuthenticatedUploadRoute,
 }
 
